@@ -742,6 +742,15 @@ define Device/tplink_tl-wr810n-v2
 endef
 TARGET_DEVICES += tplink_tl-wr810n-v2
 
+define Device/tplink_tl-wr841hp-v3
+  $(Device/tplink-8mlzma)
+  SOC := qca9533
+  DEVICE_MODEL := TL-WR841HP
+  DEVICE_VARIANT := v3
+  TPLINK_HWID := 0x08411003
+endef
+TARGET_DEVICES += tplink_tl-wr841hp-v3
+
 define Device/tplink_tl-wr842n-v1
   $(Device/tplink-8m)
   SOC := ar7241
@@ -788,6 +797,16 @@ define Device/tplink_tl-wr902ac-v1
   SUPPORTED_DEVICES += tl-wr902ac-v1
 endef
 TARGET_DEVICES += tplink_tl-wr902ac-v1
+
+define Device/tplink_tl-wr941hp-v1
+  $(Device/tplink-safeloader)
+  SOC := tp9343
+  DEVICE_MODEL := TL-WR941HP
+  DEVICE_VARIANT := v1
+  TPLINK_BOARD_ID := TL-WR941HP-V1
+  IMAGE_SIZE := 7360k
+endef
+TARGET_DEVICES += tplink_tl-wr941hp-v1
 
 define Device/tplink_wbs210-v1
   $(Device/tplink-safeloader-okli)
